@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DashFocus</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NZ+Basic:wght@100..400&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+    <h1 class="logo">DashFocus</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Hii!! Bhoomi</h2>
+      <p>"Focus on being productive instead of busy."</p>
+    </section>
+
+    <div class="chart"><section class="graph-section">
+      <canvas id="graphChart" ></canvas>
+    </section>
+
+    <div class="completed-box">
+  <p>Today's Completed Tasks</p>
+  <ul id="completedList"></ul>
+</div></div>
+
+    <section class="toDolist">
+      <div id="box1" class="boxes">
+        <p>Daily Task</p>
+        <div class="note-input">
+    <input type="text" id="dailyInput" placeholder="Write a task and press Enter">
+  </div>
+
+  <div id="dailyContainer" class="notes-container"></div>
+  </div>
+
+  <ul id="dailyList"></ul>
+      </div>
+      <div id="box2" class="boxes">
+        <p>Weekly Task</p>
+      <div class="note-input">
+    <input type="text" id="weeklyInput" placeholder="Write a task and press Enter">
+  </div>
+
+  <div id="weeklyContainer" class="notes-container"></div>
+</div>
+      <div id="box3" class="boxes">
+        <p>Monthly Task</p>
+      <div class="note-input">
+    <input type="text" id="monthlyInput" placeholder="Write a task and press Enter">
+  </div>
+
+  <div id="monthlyContainer" class="notes-container"></div>
+</div>
+    </section>
+    </main>
+    <aside class="sidebar">
+
+      <div class="profile">
+        <img src="/image.png" alt="Profile">
+        <span class="username">Bhoomi</span>
+      </div>
+
+      <div class="timer">
+        <h3>Focus Time</h3>
+        <div id="line"></div>
+        <div id="timer-display"><p id="time">25:00</p></div>
+        <div class=buttons><button id="start" onclick="startTimer()" >Start</button>
+        <button id="pause" onclick="pauseTimer()">Pause</button>
+        <button id="stop" onclick="resetTimer()">Reset</button></div>
+        <p id="todayHours">Today: 0 hrs</p>
+        <input type="number" id="focusInput" placeholder="Enter your prefered time" min="1" value="25">
+      </div>
+    </aside>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>

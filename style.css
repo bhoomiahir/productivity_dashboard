@@ -1,0 +1,259 @@
+* {
+  margin:0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(135, 188, 222, 0.3);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 60px 150px auto 200px;
+  grid-template-areas: 
+    "header aside"
+    "main aside"
+    "main aside"
+    "main aside";
+    gap: 10px;
+}
+
+#header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.logo {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgb(38, 84, 124);
+  color: #ffffff;
+  padding-left: 15px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.hero{
+  width: 100%;
+  border-radius: 30px;
+  background-color: #26547c;
+  color: #ffffff;
+  padding-left: 15px;
+  margin: 10px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100px;
+}
+
+.hero p, .profile .username, .timer p, .timer h3, .boxes p, .note-card, #todayHours, .completed-box p, li {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+
+}
+
+li {
+  padding-left: 20px;
+  list-style-position: inside;
+  margin-top: 10px;
+}
+
+.graph-section {
+  height: 300px;
+  width: 60%;
+  margin-left: 10px;
+}
+
+
+
+.profile {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  background-color: #26547c;
+  border-radius: 25px;
+  margin: 10px 5px;
+}
+
+.profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.timer {
+  height: 300px;
+  width: 100%;
+  margin: 20px;
+  margin-top: 0;
+  padding: 20px;
+  background-color: #26547c;
+  border-radius: 30px;
+}
+
+.timer h3 {
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+#focusInput {
+  height: 30px;
+  margin-left:  20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#line {
+  height: 0;
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid white
+}
+
+.timer #time {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+#timer-display {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.timer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffd166;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.toDolist  {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin: 10px 10px;
+}
+
+.boxes {
+  height: 200px;
+  width: 100%;
+  background-color: #26547c;
+  border-radius:10px;
+  padding: 10px;
+}
+
+.completed-box {
+  height: 300px;
+  width: 40%;
+  background-color: #26547c;
+  border-radius:10px;
+  padding: 20px;
+}
+
+.note-input input {
+  width: 95%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px 0;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.note-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.note-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.note-card.done {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.note-card{
+font-size: 16px;
+}
+
+#todayHours {
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.chart {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
